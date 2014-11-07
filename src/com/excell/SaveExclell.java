@@ -114,8 +114,9 @@ public class SaveExclell {
     public void update() throws IOException {
         workbook.write(fos);
     }
+
     public static void main(String args[]) throws IOException {
-        SaveExclell saveExclell = new SaveExclell("D:/MyInfo/java/TestExcell/sourse - копия.xlsx","test");
+        SaveExclell saveExclell = new SaveExclell("D:/MyInfo/java/Excell/sourse - копия.xlsx","test");
         saveExclell.createHatList();
         saveExclell.create();
         saveExclell.update();

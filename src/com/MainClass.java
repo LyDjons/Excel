@@ -12,7 +12,8 @@ public class MainClass {
     public static void main(String arg[]){
 
         Disp disp = new DispControl();
-        ArrayList<Report> report =disp.load_report("D:/MyInfo/java/TestExcell/Document.xlsx");
+
+        ArrayList<Report> report =disp.load_report("D:/MyInfo/java/Excell/Document.xlsx");
         for(Report re: report){
             System.out.println(re.toString());
         }
