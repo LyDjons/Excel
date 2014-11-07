@@ -9,7 +9,7 @@ import java.io.IOException;
 public class ClassLoader {
 
     public static void main(String args[]) throws IOException {
-
+System.out.println("ok");
 
 
 
