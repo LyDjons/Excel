@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c310d3d-1c7f-4a65-8fef-d62b3501feca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/worck/Disp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/worck/DispControl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/excell/SaveExclell.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/config/Text.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/config/Transport.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/excell/TransportExcell.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/config/XmlConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/poi-3.11-beta2/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/poi-3.11-beta2/NOTICE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/poi_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Excell.iml" afterPath="$PROJECT_DIR$/Excell.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Excell.iws" />
@@ -140,7 +136,7 @@
       <file leaf-file-name="SaveExclell.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/excell/SaveExclell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="13" selection-start="582" selection-end="582" vertical-scroll-proportion="0.127409" vertical-offset="0" max-vertical-offset="2040">
+            <state line="30" column="37" selection-start="966" selection-end="966" vertical-scroll-proportion="0.32762313" vertical-offset="0" max-vertical-offset="2040">
               <folding />
             </state>
           </provider>
@@ -246,7 +242,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/poi-lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/poi-3.11-beta2" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -517,7 +513,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/excell/SaveExclell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="582" selection-end="582" vertical-scroll-proportion="0.127409" vertical-offset="0" max-vertical-offset="2040">
+        <state line="30" column="37" selection-start="966" selection-end="966" vertical-scroll-proportion="0.32762313" vertical-offset="0" max-vertical-offset="2040">
           <folding />
         </state>
       </provider>
