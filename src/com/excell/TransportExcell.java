@@ -5,6 +5,7 @@ import com.TransportAction;
 import com.config.Transport;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.Set;
 
@@ -29,11 +30,34 @@ public class TransportExcell {
        gos = report.getInfo().getGos();
        type_of_work = get_type_of_work();
        fio  = report.getInfo().getDriver();
+start = getStartWork(report);
+    }
+    //получение начала движения
+    private static Date getStartWork(Report report){
+        for(TransportAction transportAction :report.getTransportActions()){
+            if (transportAction.getStatus().equals("Движение")) return transportAction.getStart();
+        }
+        return null;
+    }
+    //олучение окончания движения
+    private static Date getEndWork(Report report){
+        ArrayList<TransportAction> ta = report.getTransportActions();
+        for(int j=ta.size()-1;j>-1;j--){
+            if (ta.get(j).getStatus().equals("Движение")) {
+                System.out.print("obana");
+                return ta.get(j).getEnd();
+
+
+        }
+        }
+       return  null;
 
     }
+    //получение типа культуры с поля
     private static String get_type_of_work(){
         return "Збирання кукурудзи_Тест";
     }
+    //получение Названия отделения, где находился транспорт
     private static String get_list_departments_of_work(){
         return "Хмільниця_Тест";
     }
