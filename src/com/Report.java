@@ -22,7 +22,7 @@ public class Report {
     private static ArrayList<Transport> mtsTransportXML;
     static {
         try {
-           mtsTransportXML = XmlConverter.unmarshalling("D:/MyInfo/java/TestExcell/config/config.xml");
+           mtsTransportXML = XmlConverter.unmarshalling("D:/MyInfo/java/Excell/config/config.xml");
         } catch (JAXBException e) {
             e.printStackTrace();
 
@@ -39,7 +39,7 @@ for(Transport tr: mtsTransportXML){
         this.info= new Info(tr.getLenght_harvasters(),tr.getDriver(),tr.getPhone(),tr.getGos());
     }
 }
-
+if(this.info==null) this.info = new Info();
         }catch(Exception e){
             e.printStackTrace();
             this.info = new Info();

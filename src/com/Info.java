@@ -49,7 +49,7 @@ public class Info {
     }
 
     public String getGos() {
-        return gos;
+        return this.gos;
     }
 
     public void setGos(String gos) {

@@ -1,5 +1,8 @@
 package com;
 
+import com.config.Transport;
+import com.config.XmlConverter;
+import com.excell.TransportExcell;
 import com.worck.Disp;
 import com.worck.DispControl;
 
@@ -13,10 +16,19 @@ public class MainClass {
 
         Disp disp = new DispControl();
 
+
+
         ArrayList<Report> report =disp.load_report("D:/MyInfo/java/Excell/Document.xlsx");
+        ArrayList<TransportExcell> transportExcell = new ArrayList<TransportExcell>();
         for(Report re: report){
-            System.out.println(re.toString());
+         transportExcell.add(new TransportExcell(re));
+
+
         }
+for(TransportExcell tr: transportExcell){
+    System.out.println(tr.toString());
+}
+
 
     }
 }
