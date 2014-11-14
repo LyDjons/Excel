@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c310d3d-1c7f-4a65-8fef-d62b3501feca" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sourse - копия.xlsx" afterPath="$PROJECT_DIR$/sourse - копия.xlsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/MainClass.java" afterPath="$PROJECT_DIR$/src/com/MainClass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/excell/SaveExclell.java" afterPath="$PROJECT_DIR$/src/com/excell/SaveExclell.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/excell/TransportExcell.java" afterPath="$PROJECT_DIR$/src/com/excell/TransportExcell.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -71,7 +73,7 @@
       <file leaf-file-name="Report.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Report.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="32" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="1564">
+            <state line="43" column="32" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.0" vertical-offset="731" max-vertical-offset="2057">
               <folding />
             </state>
           </provider>
@@ -80,22 +82,17 @@
       <file leaf-file-name="TestSave.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/TestSave.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="8" selection-start="3579" selection-end="3579" vertical-scroll-proportion="0.0" vertical-offset="1184" max-vertical-offset="1802">
+            <state line="90" column="8" selection-start="3579" selection-end="3579" vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="2023">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SaveExclell.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SaveExclell.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/excell/SaveExclell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="0" selection-start="4543" selection-end="4543" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-              <folding>
-                <element signature="method#setSizeColumn#0;class#SaveExclell#0" expanded="false" />
-                <element signature="method#SaveExclell#0;class#SaveExclell#0" expanded="false" />
-                <element signature="method#createHatList#0;class#SaveExclell#0" expanded="false" />
-                <element signature="method#update#0;class#SaveExclell#0" expanded="false" />
-              </folding>
+            <state line="72" column="34" selection-start="2712" selection-end="2712" vertical-scroll-proportion="-0.89805824" vertical-offset="1558" max-vertical-offset="2176">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -103,10 +100,8 @@
       <file leaf-file-name="MainClass.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="1" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-              <folding>
-                <element signature="e#507#524#0" expanded="true" />
-              </folding>
+            <state line="38" column="7" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,44 +109,25 @@
       <file leaf-file-name="ExcellLoader.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ExcellLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="0" selection-start="2825" selection-end="2825" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-              <folding>
-                <element signature="method#convertStringtoTransport#0;class#ExcellLoader#0" expanded="false" />
-                <element signature="method#loadExcell#0;class#ExcellLoader#0" expanded="false" />
-              </folding>
+            <state line="79" column="0" selection-start="2825" selection-end="2825" vertical-scroll-proportion="0.0" vertical-offset="1343" max-vertical-offset="1445">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TransportExcell.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TransportExcell.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/excell/TransportExcell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="23" selection-start="425" selection-end="425" vertical-scroll-proportion="-1.3932039" vertical-offset="1082" max-vertical-offset="1700">
+            <state line="22" column="21" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1394">
               <folding>
                 <element signature="method#TransportExcell#0;class#TransportExcell#0" expanded="false" />
                 <element signature="method#TransportExcell#1;class#TransportExcell#0" expanded="false" />
                 <element signature="method#getStartWork#0;class#TransportExcell#0" expanded="false" />
+                <element signature="method#getEndWork#0;class#TransportExcell#0" expanded="false" />
                 <element signature="method#getStopIntervals#0;class#TransportExcell#0" expanded="false" />
-                <element signature="e#3508#3518#0" expanded="true" />
+                <element signature="e#3498#3508#0" expanded="true" />
+                <element signature="method#toString#0;class#TransportExcell#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassLoader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/ClassLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Info.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/Info.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0" vertical-offset="368" max-vertical-offset="986">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -176,8 +152,8 @@
         <option value="$PROJECT_DIR$/src/com/Info.java" />
         <option value="$PROJECT_DIR$/src/com/Report.java" />
         <option value="$PROJECT_DIR$/src/com/excell/Interval.java" />
-        <option value="$PROJECT_DIR$/src/com/MainClass.java" />
         <option value="$PROJECT_DIR$/src/com/excell/TransportExcell.java" />
+        <option value="$PROJECT_DIR$/src/com/MainClass.java" />
         <option value="$PROJECT_DIR$/src/com/excell/SaveExclell.java" />
       </list>
     </option>
@@ -215,6 +191,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -323,7 +300,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -405,6 +381,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -430,19 +419,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -573,8 +549,8 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -600,6 +576,70 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/Report.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="32" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2057">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/TestSave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="8" selection-start="3579" selection-end="3579" vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="2023">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/excell/SaveExclell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="0" selection-start="4543" selection-end="4543" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2261">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/MainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="1" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ExcellLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="0" selection-start="2825" selection-end="2825" vertical-scroll-proportion="0.0" vertical-offset="1343" max-vertical-offset="1445">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/excell/TransportExcell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="172" column="1" selection-start="5012" selection-end="5012" vertical-scroll-proportion="0.0" vertical-offset="1700" max-vertical-offset="1700">
+          <folding>
+            <element signature="method#TransportExcell#0;class#TransportExcell#0" expanded="false" />
+            <element signature="method#TransportExcell#1;class#TransportExcell#0" expanded="false" />
+            <element signature="method#getStartWork#0;class#TransportExcell#0" expanded="false" />
+            <element signature="method#getEndWork#0;class#TransportExcell#0" expanded="false" />
+            <element signature="method#getStopIntervals#0;class#TransportExcell#0" expanded="false" />
+            <element signature="e#3498#3508#0" expanded="true" />
+            <element signature="method#toString#0;class#TransportExcell#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="1258">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Report.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="5" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2057">
           <folding />
         </state>
@@ -608,9 +648,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="9" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="578">
-          <folding>
-            <element signature="e#507#524#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -621,8 +659,10 @@
             <element signature="method#TransportExcell#0;class#TransportExcell#0" expanded="false" />
             <element signature="method#TransportExcell#1;class#TransportExcell#0" expanded="false" />
             <element signature="method#getStartWork#0;class#TransportExcell#0" expanded="false" />
+            <element signature="method#getEndWork#0;class#TransportExcell#0" expanded="false" />
             <element signature="method#getStopIntervals#0;class#TransportExcell#0" expanded="false" />
-            <element signature="e#3508#3518#0" expanded="true" />
+            <element signature="e#3498#3508#0" expanded="true" />
+            <element signature="method#toString#0;class#TransportExcell#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -644,19 +684,14 @@
     <entry file="file://$PROJECT_DIR$/src/com/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="0" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="476">
-          <folding>
-            <element signature="e#507#524#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ExcellLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="0" selection-start="1020" selection-end="1020" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1445">
-          <folding>
-            <element signature="method#convertStringtoTransport#0;class#ExcellLoader#0" expanded="false" />
-            <element signature="method#loadExcell#0;class#ExcellLoader#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -697,8 +732,10 @@
             <element signature="method#TransportExcell#0;class#TransportExcell#0" expanded="false" />
             <element signature="method#TransportExcell#1;class#TransportExcell#0" expanded="false" />
             <element signature="method#getStartWork#0;class#TransportExcell#0" expanded="false" />
+            <element signature="method#getEndWork#0;class#TransportExcell#0" expanded="false" />
             <element signature="method#getStopIntervals#0;class#TransportExcell#0" expanded="false" />
-            <element signature="e#3508#3518#0" expanded="true" />
+            <element signature="e#3498#3508#0" expanded="true" />
+            <element signature="method#toString#0;class#TransportExcell#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -706,12 +743,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/excell/SaveExclell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="3" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
-          <folding>
-            <element signature="method#setSizeColumn#0;class#SaveExclell#0" expanded="false" />
-            <element signature="method#SaveExclell#0;class#SaveExclell#0" expanded="false" />
-            <element signature="method#createHatList#0;class#SaveExclell#0" expanded="false" />
-            <element signature="method#update#0;class#SaveExclell#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -773,29 +805,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/MainClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="1" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-          <folding>
-            <element signature="e#507#524#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ExcellLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="79" column="0" selection-start="2825" selection-end="2825" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <folding>
-            <element signature="method#convertStringtoTransport#0;class#ExcellLoader#0" expanded="false" />
-            <element signature="method#loadExcell#0;class#ExcellLoader#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -806,28 +819,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/excell/SaveExclell.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="0" selection-start="4543" selection-end="4543" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <folding>
-            <element signature="method#setSizeColumn#0;class#SaveExclell#0" expanded="false" />
-            <element signature="method#SaveExclell#0;class#SaveExclell#0" expanded="false" />
-            <element signature="method#createHatList#0;class#SaveExclell#0" expanded="false" />
-            <element signature="method#update#0;class#SaveExclell#0" expanded="false" />
-          </folding>
+        <state line="15" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.27301928" vertical-offset="0" max-vertical-offset="934">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/excell/TransportExcell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="23" selection-start="425" selection-end="425" vertical-scroll-proportion="-1.3932039" vertical-offset="1082" max-vertical-offset="1700">
+        <state line="22" column="21" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1394">
           <folding>
             <element signature="method#TransportExcell#0;class#TransportExcell#0" expanded="false" />
             <element signature="method#TransportExcell#1;class#TransportExcell#0" expanded="false" />
             <element signature="method#getStartWork#0;class#TransportExcell#0" expanded="false" />
+            <element signature="method#getEndWork#0;class#TransportExcell#0" expanded="false" />
             <element signature="method#getStopIntervals#0;class#TransportExcell#0" expanded="false" />
-            <element signature="e#3508#3518#0" expanded="true" />
+            <element signature="e#3498#3508#0" expanded="true" />
+            <element signature="method#toString#0;class#TransportExcell#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/poi-3.11-beta2/poi-3.11-beta2-20140822.jar!/org/apache/poi/ss/usermodel/CellStyle.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="17" selection-start="174" selection-end="174" vertical-scroll-proportion="0.14333895" vertical-offset="0" max-vertical-offset="2550">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/MainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="7" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/excell/SaveExclell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="34" selection-start="2712" selection-end="2712" vertical-scroll-proportion="-0.89805824" vertical-offset="1558" max-vertical-offset="2176">
+          <folding />
         </state>
       </provider>
     </entry>

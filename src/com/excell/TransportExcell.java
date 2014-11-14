@@ -108,14 +108,14 @@ public class TransportExcell {
         intervals=getStopIntervals(report,30);
     }
 
-    //получение начала движения
+          //получение начала движения
     private static Date getStartWork(Report report){
         for(TransportAction transportAction :report.getTransportActions()){
             if (transportAction.getStatus().equals("Движение")) return transportAction.getStart();
         }
         return null;
     }
-    //олучение окончания движения
+         //олучение окончания движения
     private static Date getEndWork(Report report){
         ArrayList<TransportAction> ta = report.getTransportActions();
         for(int j=ta.size()-1;j>-1;j--){
@@ -125,9 +125,9 @@ public class TransportExcell {
         }
        return  null;
     }
-    //получение типа культуры с поля
-// озвращает список остановок, которые больше чем stop_minute
- //ВАЖНО!!!!   только для транспорта который работает ДНЕМ
+
+        // озвращает список остановок, которые больше чем stop_minute
+        //ВАЖНО!!!!   только для транспорта который работает ДНЕМ
     private static ArrayList<Interval> getStopIntervals(Report report,int stop_minute){
         ArrayList<Interval> tekintervals = new ArrayList<Interval>();
         boolean flag = false;
@@ -146,7 +146,7 @@ public class TransportExcell {
 if (tekintervals.size()==0) return  null;
         return tekintervals;
     }
-
+        //получение типа культуры с поля
     private static String get_type_of_work(){
         return "Збирання кукурудзи_Тест";
     }
