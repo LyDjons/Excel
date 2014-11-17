@@ -97,6 +97,7 @@ public class TransportExcell {
          end = getEndWork(report);
          intervals=getStopIntervals(report,minute);
     }
+
     public TransportExcell(Report report) {
         department= get_list_departments_of_work();
         transport_mark =report.getTransport();
@@ -116,6 +117,7 @@ public class TransportExcell {
         return null;
     }
          //олучение окончания движения
+
     private static Date getEndWork(Report report){
         ArrayList<TransportAction> ta = report.getTransportActions();
         for(int j=ta.size()-1;j>-1;j--){
@@ -146,6 +148,7 @@ public class TransportExcell {
 if (tekintervals.size()==0) return  null;
         return tekintervals;
     }
+
         //получение типа культуры с поля
     private static String get_type_of_work(){
         return "Збирання кукурудзи_Тест";

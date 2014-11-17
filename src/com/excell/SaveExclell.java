@@ -9,11 +9,14 @@ import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFColor;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import java.awt.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Map;
 
 /**
  * Created by disp.chimc on 31.10.14.
@@ -23,6 +26,22 @@ public class SaveExclell {
     private  FileInputStream inputStream;
     private  XSSFWorkbook workbook;
     private  Sheet sheet;
+    //метод возвращает ячейку, в которой соответствует текущее время
+    private static int  get_num_cell(Date date){
+        Date countdata = new Date();
+            countdata.setHours(7);
+            countdata.setMinutes(0);
+            countdata.setSeconds(0);
+        int cell=5;
+        for(int i =0;i<53;i++){
+            if(date.getHours()==countdata.getHours()&& date.getMinutes()==countdata.getMinutes()) {
+                System.out.println("+++++++++++++++++++++++++++++++++++");
+                return cell+1;
+            } countdata.setMinutes(countdata.getMinutes()+30);
+            cell++;
+        }
+        return -1;
+          }
 
     //установка размеров колонок
     private  void setSizeColumn(Sheet sheet){
@@ -33,6 +52,30 @@ public class SaveExclell {
         sheet.setColumnWidth(4,5668);
         for(int i = 5 ; i < 53;i++)
             sheet.setColumnWidth(i,841);
+    }
+
+    private static void driwing_cell(Date start,Date end,Color color){
+
+    }
+    //округление даты (времени) до 30 мин
+    private static Date data_rounding(Date date){
+        int hour = date.getHours();
+        int minute = date.getMinutes();
+        if (minute>=45) {
+            date.setHours(++hour);
+            date.setMinutes(0);
+        } else
+        if(minute<45 && minute>=30){
+            date.setMinutes(30);
+        }else
+        if(minute>=15 && minute<30){
+            date.setMinutes(30);
+        }else
+        if(minute<15){
+            date.setMinutes(0);
+        }
+        date.setSeconds(0);
+        return date;
     }
 
     //конструктор класса
