@@ -37,7 +37,7 @@ public class SaveExclell {
         int cell=5;
         for(int i =0;i<53;i++){
             if(date.getHours()==countdata.getHours()&& date.getMinutes()==countdata.getMinutes()) {
-                System.out.println("+++++++++++++++++++++++++++++++++++");
+
                 return cell+1;
             } countdata.setMinutes(countdata.getMinutes()+30);
             cell++;
@@ -55,16 +55,16 @@ public class SaveExclell {
         for(int i = 5 ; i < 53;i++)
             sheet.setColumnWidth(i,841);
     }
-
+    //зарисовать ячейку
     private  void driwing_cell(int row, int cell,Color color){
-
-
-
-        try {
-          sheet.getRow(row).createCell(20);
-        }catch(Exception e){System.out.print(e.toString());}
-
+            XSSFCellStyle style = workbook.createCellStyle();
+            style.setFillForegroundColor(new XSSFColor(color)); //цвет ячейки
+            style.setFillPattern(CellStyle.SOLID_FOREGROUND); //?? установить цвет
+style.setBorderRight(CellStyle.BORDER_THIN);
+        style.setBorderBottom(CellStyle.BORDER_THIN);
+            sheet.getRow(row).getCell(cell).setCellStyle(style); //применить стиль
     }
+
     //округление даты (времени) до 30 мин
     private static Date data_rounding(Date date){
         int hour = date.getHours();
@@ -97,6 +97,7 @@ public class SaveExclell {
             System.out.println("Can not find file!!!");
             e.printStackTrace();
         } catch (IOException e) {
+            System.out.println("Error SaveExcel Constructor");
             e.printStackTrace();
         }
 
@@ -160,6 +161,7 @@ public class SaveExclell {
             row++;
 
         }
+
         //создаем сетку
         for(int r = 3;r<transportlist.size()+4;r++){
             for(int i = 0;i<53;i++){
@@ -173,7 +175,16 @@ public class SaveExclell {
 
 
         }
-        driwing_cell(3,20,new Color(0,176,80));
+        try{
+        int row1 =3;
+        for(TransportExcell tr: transportlist){
+            for(int i =get_num_cell(data_rounding(tr.getStart()));i<=get_num_cell(data_rounding(tr.getEnd()));i++ ){
+
+                driwing_cell(row1,i,new Color(0,176,80));
+            }
+            row1++;
+        }
+    }catch (Exception e){System.out.print("Ошибка рисования отчета");}
 
     }
     public void update() throws IOException {

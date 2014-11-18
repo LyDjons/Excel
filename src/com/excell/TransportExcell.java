@@ -114,6 +114,7 @@ public class TransportExcell {
         for(TransportAction transportAction :report.getTransportActions()){
             if (transportAction.getStatus().equals("Движение")) return transportAction.getStart();
         }
+
         return null;
     }
          //олучение окончания движения
