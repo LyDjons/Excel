@@ -1,10 +1,12 @@
 package com.excell;
 
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.ss.util.RegionUtil;
+import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFColor;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -54,7 +56,13 @@ public class SaveExclell {
             sheet.setColumnWidth(i,841);
     }
 
-    private static void driwing_cell(Date start,Date end,Color color){
+    private  void driwing_cell(int row, int cell,Color color){
+
+
+
+        try {
+          sheet.getRow(row).createCell(20);
+        }catch(Exception e){System.out.print(e.toString());}
 
     }
     //округление даты (времени) до 30 мин
@@ -150,6 +158,7 @@ public class SaveExclell {
             sheet.getRow(row).createCell(3).setCellValue(tr.getType_of_work());
             sheet.getRow(row).createCell(4).setCellValue(tr.getFio());
             row++;
+
         }
         //создаем сетку
         for(int r = 3;r<transportlist.size()+4;r++){
@@ -164,6 +173,8 @@ public class SaveExclell {
 
 
         }
+        driwing_cell(3,20,new Color(0,176,80));
+
     }
     public void update() throws IOException {
         workbook.write(fos);
@@ -173,6 +184,5 @@ public class SaveExclell {
 
 
     }
-
 
 }
