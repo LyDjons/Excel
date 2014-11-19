@@ -93,9 +93,24 @@ public class TransportExcell {
          gos = report.getInfo().getGos();
          type_of_work = get_type_of_work();
          fio  = report.getInfo().getDriver();
-         start = getStartWork(report);
-         end = getEndWork(report);
+
+        if(getStartWork(report)==null){
+            start=report.getTime_total();
+           /* start.setHours(0);
+            start.setMinutes(0);
+            start.setSeconds(0);*/
+        }else
+        {start = getStartWork(report);}
+        if(getEndWork(report)==null){
+           end=report.getTime_total();
+            /*end.setHours(23);
+            end.setMinutes(59);
+            end.setSeconds(59);*/
+        }else {
+         end = getEndWork(report);}
+
          intervals=getStopIntervals(report,minute);
+
     }
 
     public TransportExcell(Report report) {
@@ -104,8 +119,21 @@ public class TransportExcell {
         gos = report.getInfo().getGos();
         type_of_work = get_type_of_work();
         fio  = report.getInfo().getDriver();
-        start = getStartWork(report);
-        end = getEndWork(report);
+        if(getStartWork(report)==null){
+            start=report.getTime_total();
+            start.setHours(0);
+            start.setMinutes(0);
+            start.setSeconds(0);
+        }else
+        {start = getStartWork(report);}
+        if(getEndWork(report)==null){
+            end=report.getTime_stop();
+            end.setHours(23);
+            end.setMinutes(59);
+            end.setSeconds(59);
+        }else {
+            end = getEndWork(report);}
+
         intervals=getStopIntervals(report,30);
     }
 
@@ -136,7 +164,7 @@ public class TransportExcell {
         boolean flag = false;
         for(TransportAction ta: report.getTransportActions()){
             // если стоянка первая то не добавляем в лист, так как не внутри движения
-            if(ta.getStatus().equals("Стоянка") && !flag ) {flag=true;continue;}
+         //   if(ta.getStatus().equals("Стоянка") && !flag ) {flag=true;continue;}
             if(ta.getStatus().equals("Стоянка") ){
                 int minute = ta.getInterval().getMinutes();
                 if (ta.getInterval().getSeconds()>30) minute++;
@@ -146,7 +174,10 @@ public class TransportExcell {
                 flag=true;
             }
         }
-if (tekintervals.size()==0) return  null;
+if (tekintervals.size()==0) {
+   System.out.println("+++++++++++++++++++++++++++++++++++"+tekintervals.size()+"++++++++++");
+    return  null;
+}
         return tekintervals;
     }
 

@@ -30,9 +30,12 @@ public class Report {
     }
    private ArrayList<TransportAction> transportActions = new ArrayList<TransportAction>();
 
-    public Report(int tracker, String transport) {
+    public Report(int tracker, String transport,Double distance,Date time_work,Date time_stop) {
         this.tracker = tracker;
         this.transport = transport;
+        this.distance_total_km = distance;
+        this.time_total =time_work;
+        this.time_stop = time_stop;
         try{
 for(Transport tr: mtsTransportXML){
     if(tr.getTracker()==tracker){
@@ -105,8 +108,15 @@ if(this.info==null) this.info = new Info();
 
     @Override
     public String toString() {
-      return ("Tracker : "+this.tracker + "\n"+"Transport : "+ this.transport);
+        return "Report{" +
+                "time_total=" + time_total +
+                ", time_stop =" + time_stop +
+                ", distance_total_km=" + distance_total_km +
+                ", transport='" + transport + '\'' +
+                ", tracker=" + tracker +
+                '}';
     }
+
     //меот для добавление в список транспорта событий транспорта
     public void addTransportAction(TransportAction transportAction){
       this.transportActions.add(transportAction);

@@ -76,12 +76,13 @@ public class TransportAction {
 
     @Override
     public String toString() {
-        return "status = " + this.status + "\n"+
-                "place = " + this.place +  "\n"+
-                "start time = "+ this.start +"\n"+
-                "end time = "+ this.end +"\n"+
-                "total time = "+ this.interval + "\n"+
-                "km = " + "\n";
-
+        return "TransportAction{" +
+                "status='" + status + '\'' +
+                ", place='" + place + '\'' +
+                ", start=" + start +
+                ", end=" + end +
+                ", interval=" + interval +
+                ", milage=" + milage +
+                '}';
     }
 }
