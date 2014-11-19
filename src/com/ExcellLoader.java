@@ -46,7 +46,7 @@ public class ExcellLoader {
                     i=i+3;
                     for(;i<row_total;i++){
                         row =sheet.getRow(i);
-                        cell =(XSSFCell) row.getCell(0);
+                      
                         if(i+1>row_total||(((XSSFCell) (sheet.getRow(i+1)).getCell(0)).toString()).contains("Транспортное средство")==true){
                             break;
                         }
