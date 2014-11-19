@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c310d3d-1c7f-4a65-8fef-d62b3501feca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ExcellLoader.java" afterPath="$PROJECT_DIR$/src/com/ExcellLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="3c310d3d-1c7f-4a65-8fef-d62b3501feca" name="Default" comment="work with null&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/MainClass.java" afterPath="$PROJECT_DIR$/src/com/MainClass.java" />
     </list>
     <ignored path="Excell.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,10 +75,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExcellLoader.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ExcellLoader.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ExcellLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="22" selection-start="1782" selection-end="1782" vertical-scroll-proportion="0.34475374" vertical-offset="375" max-vertical-offset="1309">
+            <state line="66" column="17" selection-start="2609" selection-end="2609" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1309">
               <folding />
             </state>
           </provider>
@@ -106,7 +105,16 @@
       <file leaf-file-name="MainClass.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="49" selection-start="978" selection-end="978" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="884">
+            <state line="30" column="67" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0" vertical-offset="164" max-vertical-offset="782">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Interval.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/excell/Interval.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="0" selection-start="652" selection-end="652" vertical-scroll-proportion="0.6326861" vertical-offset="0" max-vertical-offset="646">
               <folding />
             </state>
           </provider>
@@ -134,9 +142,9 @@
         <option value="$PROJECT_DIR$/src/com/excell/Interval.java" />
         <option value="$PROJECT_DIR$/src/com/config/Text.java" />
         <option value="$PROJECT_DIR$/src/com/excell/SaveExclell.java" />
-        <option value="$PROJECT_DIR$/src/com/MainClass.java" />
         <option value="$PROJECT_DIR$/src/com/excell/TransportExcell.java" />
         <option value="$PROJECT_DIR$/src/com/ExcellLoader.java" />
+        <option value="$PROJECT_DIR$/src/com/MainClass.java" />
       </list>
     </option>
   </component>
@@ -537,6 +545,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24583334" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32916668" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -547,7 +556,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -862,13 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/excell/Interval.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="202" selection-end="202" vertical-scroll-proportion="0.302589" vertical-offset="0" max-vertical-offset="646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/TestColorExcell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="5" selection-start="304" selection-end="794" vertical-scroll-proportion="0.24110033" vertical-offset="4" max-vertical-offset="663">
@@ -897,13 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/MainClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="49" selection-start="978" selection-end="978" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/worck/DispControl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="39" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
@@ -927,7 +921,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ExcellLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="22" selection-start="1782" selection-end="1782" vertical-scroll-proportion="0.34475374" vertical-offset="375" max-vertical-offset="1309">
+        <state line="66" column="17" selection-start="2609" selection-end="2609" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1309">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/MainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="67" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0" vertical-offset="164" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/excell/Interval.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="652" selection-end="652" vertical-scroll-proportion="0.6326861" vertical-offset="0" max-vertical-offset="646">
           <folding />
         </state>
       </provider>
