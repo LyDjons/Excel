@@ -52,8 +52,8 @@ public class SaveExclell {
         sheet.setColumnWidth(2,2925);
         sheet.setColumnWidth(3,6619);
         sheet.setColumnWidth(4,5668);
-        for(int i = 5 ; i < 53;i++)
-            sheet.setColumnWidth(i,841);
+        for(int i = 5 ; i < 101;i++)
+            sheet.setColumnWidth(i,420);
     }
     //зарисовать ячейку
     private  void driwing_cell(int row, int cell,Color color){
@@ -67,22 +67,31 @@ style.setBorderRight(CellStyle.BORDER_THIN);
 
     //округление даты (времени) до 30 мин
     private static Date data_rounding(Date date){
-        int hour = date.getHours();
-        int minute = date.getMinutes();
-        if (minute>=45) {
-            date.setHours(++hour);
-            date.setMinutes(0);
-        } else
-        if(minute<45 && minute>=30){
-            date.setMinutes(30);
-        }else
-        if(minute>=15 && minute<30){
-            date.setMinutes(30);
-        }else
-        if(minute<15){
-            date.setMinutes(0);
+        int switchVariable = 0;
+        double minute  = date.getMinutes();
+        if(date.getSeconds()>=30) minute+=1;
+        if( minute>=0 && minute <7.5) switchVariable = 5;
+        else if( minute>=7.5 && minute <=15) switchVariable = 10;
+        else if( minute>15 && minute <22.5) switchVariable = 20;
+        else if( minute>=22.5 && minute <=30) switchVariable = 25;
+        else if( minute>30 && minute <37.5) switchVariable = 35;
+        else if( minute>=37.5 && minute <=45) switchVariable = 40;
+        else if( minute>45 && minute <52.5) switchVariable = 50;
+        else if( minute>52.5 && minute <=60) switchVariable = 55;
+
+        switch (switchVariable)
+        {
+            case 5: date.setMinutes(0);date.setSeconds(0); break;
+            case 10: date.setMinutes(15);date.setSeconds(0); break;
+            case 20: date.setMinutes(15);date.setSeconds(0); break;
+            case 25: date.setMinutes(30);date.setSeconds(0); break;
+            case 35: date.setMinutes(30);date.setSeconds(0); break;
+            case 40: date.setMinutes(45);date.setSeconds(0); break;
+            case 50: date.setMinutes(45);date.setSeconds(0); break;
+            case 55: date.setHours(17);date.setMinutes(0);date.setSeconds(0); break;
+            default: date.setMinutes(0);date.setSeconds(0); break;
         }
-        date.setSeconds(0);
+
         return date;
     }
 
@@ -120,10 +129,10 @@ style.setBorderRight(CellStyle.BORDER_THIN);
         Row cap_row = workbook.getSheet(sheet.getSheetName()).createRow(2);
         int count =7;
         XSSFCellStyle style2 = workbook.createCellStyle();
-        for(int i = 5; i < 53; i=i+2){
+        for(int i = 5; i < 101; i=i+4){
             if(count==25) count=1;
             cap_row.createCell(i).setCellValue(count++);
-            region = new CellRangeAddress(2, 2, i, i+1);//(firstRow,lastRow,firstCol,lastCol)
+            region = new CellRangeAddress(2, 2, i, i+3);//(firstRow,lastRow,firstCol,lastCol)
             RegionUtil.setBorderTop(CellStyle.BORDER_MEDIUM, region, sheet, workbook);
             RegionUtil.setBorderLeft(CellStyle.BORDER_MEDIUM, region, sheet, workbook);
             RegionUtil.setBorderRight(CellStyle.BORDER_MEDIUM, region, sheet, workbook);
@@ -164,18 +173,20 @@ style.setBorderRight(CellStyle.BORDER_THIN);
 
         //создаем сетку
         for(int r = 3;r<transportlist.size()+4;r++){
-            for(int i = 0;i<53;i++){
+            for(int i = 0;i<101;i++){
             CellRangeAddress region = new CellRangeAddress(r, r, i, i);//(firstRow,lastRow,firstCol,lastCol)
                 RegionUtil.setBorderTop(CellStyle.BORDER_THIN, region, sheet, workbook);
-                RegionUtil.setBorderLeft(CellStyle.BORDER_THIN, region, sheet, workbook);
-                RegionUtil.setBorderRight(CellStyle.BORDER_THIN, region, sheet, workbook);
                 RegionUtil.setBorderBottom(CellStyle.BORDER_THIN, region, sheet, workbook);
-            RegionUtil.setBorderBottom(CellStyle.BORDER_THIN, region, sheet, workbook);
+
+                if (i<5){
+                RegionUtil.setBorderRight(CellStyle.BORDER_THIN, region, sheet, workbook);
+                    RegionUtil.setBorderLeft(CellStyle.BORDER_THIN, region, sheet, workbook);
+                }
             }
 
 
         }
-        try{
+       /* try{
         int row1 =4;
         for(TransportExcell tr: transportlist){
             for(int i =get_num_cell(data_rounding(tr.getStart()));i<=get_num_cell(data_rounding(tr.getEnd()));i++ ){
@@ -185,7 +196,7 @@ style.setBorderRight(CellStyle.BORDER_THIN);
             row1++;
         }
     }catch (Exception e){System.out.print("Ошибка рисования отчета");}
-
+*/
     }
     public void update() throws IOException {
         workbook.write(fos);
