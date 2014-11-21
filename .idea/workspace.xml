@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c310d3d-1c7f-4a65-8fef-d62b3501feca" name="Default" comment="work with null&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/excell/Pinter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sourse - копия.xlsx" afterPath="$PROJECT_DIR$/sourse - копия.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sourse.xlsx" afterPath="$PROJECT_DIR$/sourse.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/MainClass.java" afterPath="$PROJECT_DIR$/src/com/MainClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Report.java" afterPath="$PROJECT_DIR$/src/com/Report.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/excell/SaveExclell.java" afterPath="$PROJECT_DIR$/src/com/excell/SaveExclell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/excell/TransportExcell.java" afterPath="$PROJECT_DIR$/src/com/excell/TransportExcell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Excell.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -98,7 +91,7 @@
       <file leaf-file-name="TransportExcell.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/excell/TransportExcell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="209" column="77" selection-start="6359" selection-end="6359" vertical-scroll-proportion="0.32490975" vertical-offset="2693" max-vertical-offset="3604">
+            <state line="214" column="0" selection-start="6531" selection-end="6531" vertical-scroll-proportion="0.1101083" vertical-offset="2897" max-vertical-offset="3604">
               <folding>
                 <element signature="e#5919#5927#0" expanded="true" />
                 <element signature="method#getFirstIndexWorkGreen#0;class#TransportExcell#0" expanded="false" />
@@ -1064,7 +1057,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/excell/TransportExcell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="77" selection-start="6359" selection-end="6359" vertical-scroll-proportion="0.32490975" vertical-offset="2693" max-vertical-offset="3604">
+        <state line="214" column="0" selection-start="6531" selection-end="6531" vertical-scroll-proportion="0.1101083" vertical-offset="2897" max-vertical-offset="3604">
           <folding>
             <element signature="e#5919#5927#0" expanded="true" />
             <element signature="method#getFirstIndexWorkGreen#0;class#TransportExcell#0" expanded="false" />
