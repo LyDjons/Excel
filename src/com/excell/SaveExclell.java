@@ -30,9 +30,6 @@ public class SaveExclell {
     private  XSSFWorkbook workbook;
     private  Sheet sheet;
 
-    //метод возвращает ячейку, в которой соответствует текущее время
-
-
     //установка размеров колонок
     private  void setSizeColumn(Sheet sheet){
         sheet.setColumnWidth(0,3766);
@@ -43,23 +40,18 @@ public class SaveExclell {
         for(int i = 5 ; i < 101;i++)
             sheet.setColumnWidth(i,420);
     }
-    //зарисовать ячейку
+
+    //зарисовать ячейку любым цветом
     private  void driwing_cell(int row, int cell,Color color){
             XSSFCellStyle style = workbook.createCellStyle();
             style.setFillForegroundColor(new XSSFColor(color)); //цвет ячейки
             style.setFillPattern(CellStyle.SOLID_FOREGROUND); //?? установить цвет
-style.setBorderRight(CellStyle.BORDER_THIN);
-        style.setBorderBottom(CellStyle.BORDER_THIN);
+            style.setBorderTop(CellStyle.BORDER_THIN);
+             style.setBorderBottom(CellStyle.BORDER_THIN);
             sheet.getRow(row).getCell(cell).setCellStyle(style); //применить стиль
     }
 
-
-
-    public SaveExclell() {
-       //test constructor
-    }
-
-    //конструктор класса
+    //конструктор класса path-путь к файлу  createlistname- имя листа
     public SaveExclell(String path,String createlistname) {
         try {
             inputStream = new FileInputStream(path);
@@ -122,6 +114,33 @@ style.setBorderRight(CellStyle.BORDER_THIN);
         }
     }
 
+    //нарисовать отчет
+    private void driwing_report(Color work,Color stop,ArrayList<TransportExcell> transportlist){
+        try{
+            int row1 =4;
+            for(TransportExcell tr: transportlist){
+                for(int i = tr.getFirstIndexWorkGreen(tr.getPintersList())-1;i<tr.getLastIndexWorkGreen(tr.getPintersList());i++){
+                    if(i>4) driwing_cell(row1, i,work);
+                }
+                row1++;
+            }
+            row1=4;
+            for(TransportExcell tr: transportlist){
+                for(Pinter p:tr.getPintersList()){
+                    if(p.getColor().equals(stop)){
+                        for(int i =p.getStart();i<p.getEnd();i++){
+                            driwing_cell(row1,i,p.getColor());
+                        }
+                    }
+                }
+                row1++;
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    //заполнение таблици
     public void create(ArrayList<TransportExcell> transportlist) throws IOException {
         int row = 4;
         //заполняем  инф. таблицу
@@ -150,30 +169,13 @@ style.setBorderRight(CellStyle.BORDER_THIN);
 
 
         }
-        try{
-        int row1 =4;
-        for(TransportExcell tr: transportlist){
-
-
-                       for(int i = tr.getFirstIndexWorkGreen(tr.getPintersList());i<tr.getLastIndexWorkGreen(tr.getPintersList());i++){
-                           driwing_cell(row1, i, new Color(0,176,80));
-                       }
-
-
-            row1++;
-        }
-    }catch (Exception e){System.out.print("Ошибка рисования отчета");}
+        driwing_report(new Color(0,176,80),new Color(255,255,0),transportlist);
 
     }
+
     public void update() throws IOException {
         workbook.write(fos);
     }
 
-
-
-    public static void main(String args[]) throws IOException {
-
-
-    }
 
 }

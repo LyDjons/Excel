@@ -20,6 +20,7 @@ public class Report {
 
     private Info info;
     private static ArrayList<Transport> mtsTransportXML;
+    //статический блок загрузки конфигурационных файлов
     static {
         try {
            mtsTransportXML = XmlConverter.unmarshalling("config/config.xml");
@@ -34,8 +35,8 @@ public class Report {
         this.tracker = tracker;
         this.transport = transport;
         this.distance_total_km = distance;
-        this.time_total =time_work;
-        this.time_stop = time_stop;
+        this.time_total =(Date)time_work.clone();
+        this.time_stop = (Date)time_stop.clone();
         try{
 for(Transport tr: mtsTransportXML){
     if(tr.getTracker()==tracker){
@@ -48,13 +49,6 @@ if(this.info==null) this.info = new Info();
             this.info = new Info();
         }
 
-
-    }
-
-    public Report(int tracker, String transport,Info info) {
-        this.tracker = tracker;
-        this.transport = transport;
-        this.info = info;
 
     }
 
@@ -83,19 +77,19 @@ if(this.info==null) this.info = new Info();
     }
 
     public Date getTime_total() {
-        return time_total;
+        return (Date)time_total.clone();
     }
 
     public void setTime_total(Date time_total) {
-        this.time_total = time_total;
+        this.time_total = (Date)time_total.clone();
     }
 
     public Date getTime_stop() {
-        return time_stop;
+        return (Date)time_stop.clone();
     }
 
     public void setTime_stop(Date time_stop) {
-        this.time_stop = time_stop;
+        this.time_stop = (Date)time_stop.clone();
     }
 
     public Info getInfo() {

@@ -39,11 +39,11 @@ public class TransportAction {
     }
 
     public Date getStart() {
-        return start;
+        return (Date)start.clone();
     }
 
     public Date getEnd() {
-        return end;
+        return (Date)end.clone();
     }
 
     public double getMilage() {
@@ -55,11 +55,11 @@ public class TransportAction {
     }
 
     public void setStart(Date start) {
-        this.start = start;
+        this.start = (Date)start.clone();
     }
 
     public void setEnd(Date end) {
-        this.end = end;
+        this.end = (Date)end.clone();
     }
 
     public void setMilage(double milage) {

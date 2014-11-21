@@ -24,7 +24,7 @@ public class TransportExcell {
     private Date end;
     private ArrayList<Pinter> pintersList;
 
-    private ArrayList<Interval> intervals;
+
 
     public String getDepartment() {
         return department;
@@ -70,55 +70,26 @@ public class TransportExcell {
     }
 
     public Date getStart() {
-        return start;
+        return (Date)start.clone();
     }
 
     public void setStart(Date start) {
-        this.start = start;
+        this.start = (Date)start.clone();
     }
 
     public Date getEnd() {
-        return end;
+        return (Date)end.clone();
     }
 
     public void setEnd(Date end) {
-        this.end = end;
+        this.end = (Date)end.clone();
     }
 
-    public ArrayList<Interval> getIntervals() {
-        return intervals;
-    }
 
-    public void setIntervals(ArrayList<Interval> intervals) {
-        this.intervals = intervals;
-    }
 
-    public TransportExcell(Report report,int minute) {
-         department= get_list_departments_of_work();
-         transport_mark =report.getTransport();
-         gos = report.getInfo().getGos();
-         type_of_work = get_type_of_work();
-         fio  = report.getInfo().getDriver();
 
-        if(getStartWork(report)==null){
-            start=report.getTime_total();
-           /* start.setHours(0);
-            start.setMinutes(0);
-            start.setSeconds(0);*/
-        }else
-        {start = getStartWork(report);}
-        if(getEndWork(report)==null){
-           end=report.getTime_total();
-            /*end.setHours(23);
-            end.setMinutes(59);
-            end.setSeconds(59);*/
-        }else {
-         end = getEndWork(report);}
 
-         intervals=getStopIntervals(report,minute);
-            pintersList = getPainterListIntervalNumColumn(report.getTransportActions());
 
-    }
 
     public TransportExcell(Report report) {
         department= get_list_departments_of_work();
@@ -127,29 +98,30 @@ public class TransportExcell {
         type_of_work = get_type_of_work();
         fio  = report.getInfo().getDriver();
         if(getStartWork(report)==null){
-            start=report.getTime_total();
+
+            start=(Date)report.getTime_total().clone();
             start.setHours(0);
             start.setMinutes(0);
             start.setSeconds(0);
         }else
-        {start = getStartWork(report);}
+        {start = (Date)getStartWork(report).clone();}
         if(getEndWork(report)==null){
-            end=report.getTime_stop();
+
+            end=(Date)report.getTime_stop().clone();
             end.setHours(23);
             end.setMinutes(59);
             end.setSeconds(59);
         }else {
-            end = getEndWork(report);}
+            end = (Date)getEndWork(report).clone();}
+pintersList=getPainterListIntervalNumColumn(report.getTransportActions());
 
-        intervals=getStopIntervals(report,30);
     }
 
           //получение начала движения
     private static Date getStartWork(Report report){
         for(TransportAction transportAction :report.getTransportActions()){
-            if (transportAction.getStatus().equals("Движение")) return transportAction.getStart();
+            if (transportAction.getStatus().equals("Движение")) return (Date)transportAction.getStart().clone();
         }
-
         return null;
     }
          //олучение окончания движения
@@ -158,35 +130,13 @@ public class TransportExcell {
         ArrayList<TransportAction> ta = report.getTransportActions();
         for(int j=ta.size()-1;j>-1;j--){
             if (ta.get(j).getStatus().equals("Движение")) {
-                return ta.get(j).getEnd();
+                return (Date)ta.get(j).getEnd().clone();
                  }
         }
        return  null;
     }
 
-        // озвращает список остановок, которые больше чем stop_minute
-        //ВАЖНО!!!!   только для транспорта который работает ДНЕМ
-    private static ArrayList<Interval> getStopIntervals(Report report,int stop_minute){
-        ArrayList<Interval> tekintervals = new ArrayList<Interval>();
-        boolean flag = false;
-        for(TransportAction ta: report.getTransportActions()){
-            // если стоянка первая то не добавляем в лист, так как не внутри движения
-         //   if(ta.getStatus().equals("Стоянка") && !flag ) {flag=true;continue;}
-            if(ta.getStatus().equals("Стоянка") ){
-                int minute = ta.getInterval().getMinutes();
-                if (ta.getInterval().getSeconds()>30) minute++;
-                if(ta.getInterval().getHours()>0) minute = minute + 60*ta.getInterval().getHours();
-                if(minute<stop_minute) continue;
-                    tekintervals.add(new Interval(ta.getStart(),ta.getEnd(),minute));
-                flag=true;
-            }
-        }
-if (tekintervals.size()==0) {
-   System.out.println("+++++++++++++++++++++++++++++++++++"+tekintervals.size()+"++++++++++");
-    return  null;
-}
-        return tekintervals;
-    }
+
 
         //получение типа культуры с поля
     private static String get_type_of_work(){
@@ -232,7 +182,8 @@ if (tekintervals.size()==0) {
         }
         return index;
     }
-    //округление даты (времени) до 30 мин
+
+    //округление даты (времени) до 15 мин
     private static Date data_rounding(Date date){
         int switchVariable = 0;
         double minute = date.getMinutes();
@@ -257,11 +208,11 @@ if (tekintervals.size()==0) {
             case 55: date.setHours(date.getHours()+1);date.setMinutes(0);date.setSeconds(0); break;
             default: date.setMinutes(0);date.setSeconds(0); break;
         }
-        return date;
+        return (Date)date.clone();
     }
 
     private static int  get_num_cell(Date date){
-        date = data_rounding(date);
+        date = (Date)data_rounding(date).clone();
         Date countdata = new Date();
         countdata.setHours(7);
         countdata.setMinutes(0);
@@ -271,7 +222,7 @@ if (tekintervals.size()==0) {
             //    System.out.println("data = " + date + "     count  " + countdata + "   cell=" + cell);
             if(date.getHours()==countdata.getHours()&& date.getMinutes()==countdata.getMinutes()) {
                 // System.out.println("result=" + cell);
-                return cell+1;
+                return cell;
             } countdata.setMinutes(countdata.getMinutes()+15);
             cell++;
         }

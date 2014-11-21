@@ -5,7 +5,6 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import javax.net.ssl.SSLContext;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.ParseException;
@@ -19,6 +18,7 @@ import java.util.Date;
 public class ExcellLoader {
     private  ArrayList<Report> reports = new ArrayList<Report>();
     private Date date;
+
     //мтод конвертирует информацию о транспорте в объект Report
     private  Report convertStringtoTransport(String str, String info){
         str= str.substring(23,str.length()-9);
@@ -28,10 +28,7 @@ public class ExcellLoader {
 
 
         String work = info.substring(info.lastIndexOf("Время в пути: ")+14,info.lastIndexOf("\n"));
-
         String stop = info.substring(info.indexOf("Время стоянок: ")+15,info.length());
-
-
         Date time_work = new Date();
         Date time_stop = new Date();
 
@@ -42,14 +39,12 @@ public class ExcellLoader {
             time_work.setMonth(date.getMonth());
             time_work.setYear(date.getYear());
 
-
             time_stop.setHours(Integer.parseInt(stop.substring(0, 2)));
             time_stop.setMinutes(Integer.parseInt(stop.substring(3, 5)));
             time_stop.setSeconds(Integer.parseInt(stop.substring(6, 8)));
             time_stop.setYear(date.getYear());
             time_stop.setDate(date.getDate());
             time_stop.setMonth(date.getMonth());
-
 
         return new Report(tracker,transport,km,time_work,time_stop);
 
