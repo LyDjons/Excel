@@ -22,7 +22,7 @@ public class Report {
     private static ArrayList<Transport> mtsTransportXML;
     static {
         try {
-           mtsTransportXML = XmlConverter.unmarshalling("D:/MyInfo/java/Excell/config/config.xml");
+           mtsTransportXML = XmlConverter.unmarshalling("config/config.xml");
         } catch (JAXBException e) {
             e.printStackTrace();
 

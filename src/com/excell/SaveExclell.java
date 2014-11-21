@@ -1,5 +1,6 @@
 package com.excell;
 
+import com.TransportAction;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Row;
@@ -28,22 +29,9 @@ public class SaveExclell {
     private  FileInputStream inputStream;
     private  XSSFWorkbook workbook;
     private  Sheet sheet;
-    //метод возвращает ячейку, в которой соответствует текущее время
-    private static int  get_num_cell(Date date){
-        Date countdata = new Date();
-            countdata.setHours(7);
-            countdata.setMinutes(0);
-            countdata.setSeconds(0);
-        int cell=5;
-        for(int i =0;i<53;i++){
-            if(date.getHours()==countdata.getHours()&& date.getMinutes()==countdata.getMinutes()) {
 
-                return cell+1;
-            } countdata.setMinutes(countdata.getMinutes()+30);
-            cell++;
-        }
-        return -1;
-          }
+    //метод возвращает ячейку, в которой соответствует текущее время
+
 
     //установка размеров колонок
     private  void setSizeColumn(Sheet sheet){
@@ -65,34 +53,10 @@ style.setBorderRight(CellStyle.BORDER_THIN);
             sheet.getRow(row).getCell(cell).setCellStyle(style); //применить стиль
     }
 
-    //округление даты (времени) до 30 мин
-    private static Date data_rounding(Date date){
-        int switchVariable = 0;
-        double minute  = date.getMinutes();
-        if(date.getSeconds()>=30) minute+=1;
-        if( minute>=0 && minute <7.5) switchVariable = 5;
-        else if( minute>=7.5 && minute <=15) switchVariable = 10;
-        else if( minute>15 && minute <22.5) switchVariable = 20;
-        else if( minute>=22.5 && minute <=30) switchVariable = 25;
-        else if( minute>30 && minute <37.5) switchVariable = 35;
-        else if( minute>=37.5 && minute <=45) switchVariable = 40;
-        else if( minute>45 && minute <52.5) switchVariable = 50;
-        else if( minute>52.5 && minute <=60) switchVariable = 55;
 
-        switch (switchVariable)
-        {
-            case 5: date.setMinutes(0);date.setSeconds(0); break;
-            case 10: date.setMinutes(15);date.setSeconds(0); break;
-            case 20: date.setMinutes(15);date.setSeconds(0); break;
-            case 25: date.setMinutes(30);date.setSeconds(0); break;
-            case 35: date.setMinutes(30);date.setSeconds(0); break;
-            case 40: date.setMinutes(45);date.setSeconds(0); break;
-            case 50: date.setMinutes(45);date.setSeconds(0); break;
-            case 55: date.setHours(17);date.setMinutes(0);date.setSeconds(0); break;
-            default: date.setMinutes(0);date.setSeconds(0); break;
-        }
 
-        return date;
+    public SaveExclell() {
+       //test constructor
     }
 
     //конструктор класса
@@ -186,21 +150,26 @@ style.setBorderRight(CellStyle.BORDER_THIN);
 
 
         }
-       /* try{
+        try{
         int row1 =4;
         for(TransportExcell tr: transportlist){
-            for(int i =get_num_cell(data_rounding(tr.getStart()));i<=get_num_cell(data_rounding(tr.getEnd()));i++ ){
 
-                driwing_cell(row1,i,new Color(0,176,80));
-            }
+
+                       for(int i = tr.getFirstIndexWorkGreen(tr.getPintersList());i<tr.getLastIndexWorkGreen(tr.getPintersList());i++){
+                           driwing_cell(row1, i, new Color(0,176,80));
+                       }
+
+
             row1++;
         }
     }catch (Exception e){System.out.print("Ошибка рисования отчета");}
-*/
+
     }
     public void update() throws IOException {
         workbook.write(fos);
     }
+
+
 
     public static void main(String args[]) throws IOException {
 
