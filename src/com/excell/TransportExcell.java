@@ -21,6 +21,7 @@ public class TransportExcell {
     private String fio;
     private Date start;
     private Date end;
+    
     private ArrayList<Interval> intervals;
 
     public String getDepartment() {
