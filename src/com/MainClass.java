@@ -51,6 +51,7 @@ public class MainClass {
        }catch(Exception e){
            System.out.println("WARNING! Proizoshel pirdec");
        }
+        System.out.println("..well done!");
 
 
     }
