@@ -119,7 +119,7 @@ public class SaveExclell {
         try{
             int row1 =4;
             for(TransportExcell tr: transportlist){
-                for(int i = tr.getFirstIndexWorkGreen(tr.getPintersList())-1;i<tr.getLastIndexWorkGreen(tr.getPintersList());i++){
+                for(int i = tr.getFirstIndexWorkGreen(tr.getPintersList())-1;i<tr.getLastIndexWorkGreen(tr.getPintersList())+1;i++){
                     if(i>4) driwing_cell(row1, i,work);
                 }
                 row1++;

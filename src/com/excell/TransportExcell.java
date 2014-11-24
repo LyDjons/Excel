@@ -85,12 +85,6 @@ public class TransportExcell {
         this.end = (Date)end.clone();
     }
 
-
-
-
-
-
-
     public TransportExcell(Report report) {
         department= get_list_departments_of_work();
         transport_mark =report.getTransport();
@@ -148,15 +142,19 @@ pintersList=getPainterListIntervalNumColumn(report.getTransportActions());
     }
     public ArrayList<Pinter> getPainterListIntervalNumColumn(ArrayList<TransportAction> action){
         ArrayList<Pinter> painterarray = new ArrayList<Pinter>();
-        for(TransportAction transportAction:action){
-            if(transportAction.getStart().getHours()<7) continue;
 
+        for(TransportAction transportAction:action){
+
+            if(transportAction.getStart().getHours()<7) continue;
+if(transportAction.getStatus().contains("Стоянка") && transportAction.getInterval().getMinutes()<15 &&
+transportAction.getInterval().getHours()<0) continue;
 
 
             int start =get_num_cell(transportAction.getStart());
             int end = get_num_cell(transportAction.getEnd());
             if(start==end) continue;
-            if(transportAction.getStatus().contains("Стоянка")){
+            if(transportAction.getStatus().contains("Стоянка") && (transportAction.getInterval().getHours()>0 ||
+            transportAction.getInterval().getMinutes()>14)){
                 painterarray.add(new Pinter(start,end,new Color(255,255,0)));
             }
             if(transportAction.getStatus().contains("Движение")){
