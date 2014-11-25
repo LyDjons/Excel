@@ -1,14 +1,11 @@
-package com.excell;
+package com.disp.disp.control.saveExcell;
 
-import com.Report;
-import com.TransportAction;
-import com.config.Transport;
+import com.disp.disp.control.loadExcell.Report;
+import com.disp.disp.control.loadExcell.TransportAction;
 
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
-import java.util.Set;
 
 /**
  * Created by disp.chimc on 31.10.14.
@@ -33,6 +30,7 @@ public class TransportExcell {
     public ArrayList<TransportAction> getTransportAction(Report report){
         return report.getTransportActions();
     }
+
     public void setDepartment(String department) {
         this.department = department;
     }

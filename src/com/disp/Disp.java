@@ -1,6 +1,6 @@
-package com.worck;
+package com.disp;
 
-import com.Report;
+import com.disp.disp.control.loadExcell.Report;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -12,5 +12,5 @@ public interface Disp {
     //выгрузка полного отчета в ArrayList
     public ArrayList<Report> load_report(String path);
 
-    public void save_report(ArrayList<Report> reports, String path) throws IOException;
+    public void save_report(ArrayList<Report> reports, String path);
 }
