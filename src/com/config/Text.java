@@ -10,11 +10,7 @@ import java.util.Date;
 public class Text {
 
     public static void main(String args[]){
-    Date a = new Date();
-        System.out.println(a);
-    Date b =(Date)a.clone();
-        b.setHours(11);
-        System.out.println(a);
+    System.out.print("Comleate");
 }
 
 

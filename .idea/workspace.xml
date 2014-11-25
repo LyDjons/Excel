@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c310d3d-1c7f-4a65-8fef-d62b3501feca" name="Default" comment="work with null&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sourse - копия.xlsx" afterPath="$PROJECT_DIR$/sourse - копия.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/excell/SaveExclell.java" afterPath="$PROJECT_DIR$/src/com/excell/SaveExclell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/excell/TransportExcell.java" afterPath="$PROJECT_DIR$/src/com/excell/TransportExcell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/config/Text.java" afterPath="$PROJECT_DIR$/src/com/config/Text.java" />
     </list>
     <ignored path="Excell.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,28 +69,25 @@
       <file leaf-file-name="SaveExclell.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/excell/SaveExclell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="84" selection-start="6182" selection-end="6182" vertical-scroll-proportion="0.0" vertical-offset="1238" max-vertical-offset="1955">
-              <folding>
-                <element signature="method#driwing_report#0;class#SaveExclell#0" expanded="false" />
-                <element signature="method#create#0;class#SaveExclell#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Text.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/config/Text.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+            <state line="143" column="84" selection-start="6182" selection-end="6182" vertical-scroll-proportion="0.0" vertical-offset="2431" max-vertical-offset="3179">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TransportExcell.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Text.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/config/Text.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="0" selection-start="262" selection-end="262" vertical-scroll-proportion="0.2943723" vertical-offset="0" max-vertical-offset="924">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransportExcell.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/excell/TransportExcell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="171" column="9" selection-start="4868" selection-end="4868" vertical-scroll-proportion="0.40725243" vertical-offset="2139" max-vertical-offset="3859">
+            <state line="226" column="18" selection-start="7275" selection-end="7275" vertical-scroll-proportion="0.0" vertical-offset="2907" max-vertical-offset="3859">
               <folding>
                 <element signature="e#7329#7330#0" expanded="true" />
                 <element signature="e#7363#7364#0" expanded="true" />
@@ -116,7 +108,7 @@
       <file leaf-file-name="TransportAction.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/TransportAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="19" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1292">
+            <state line="13" column="19" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1598">
               <folding />
             </state>
           </provider>
@@ -125,7 +117,7 @@
       <file leaf-file-name="Transport.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/config/Transport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
               <folding />
             </state>
           </provider>
@@ -134,7 +126,7 @@
       <file leaf-file-name="Report.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Report.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1768">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2125">
               <folding />
             </state>
           </provider>
@@ -169,13 +161,13 @@
         <option value="$PROJECT_DIR$/src/com/excell/Pinter.java" />
         <option value="$PROJECT_DIR$/src/com/TransportAction.java" />
         <option value="$PROJECT_DIR$/src/com/excell/Interval.java" />
-        <option value="$PROJECT_DIR$/src/com/config/Text.java" />
         <option value="$PROJECT_DIR$/src/com/MainClass.java" />
         <option value="$PROJECT_DIR$/src/com/Report.java" />
         <option value="$PROJECT_DIR$/src/com/ExcellLoader.java" />
         <option value="$PROJECT_DIR$/src/com/worck/DispControl.java" />
         <option value="$PROJECT_DIR$/src/com/excell/SaveExclell.java" />
         <option value="$PROJECT_DIR$/src/com/excell/TransportExcell.java" />
+        <option value="$PROJECT_DIR$/src/com/config/Text.java" />
       </list>
     </option>
   </component>
@@ -211,6 +203,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -231,8 +225,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -317,19 +309,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -355,6 +334,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -497,19 +489,19 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24583334" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3273684" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24947916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21789473" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21789473" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3273684" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -563,20 +555,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/excell/SaveExclell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="method#driwing_report#0;class#SaveExclell#0" expanded="false" />
-            <element signature="method#create#0;class#SaveExclell#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -589,11 +574,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Report.java">
@@ -611,20 +592,13 @@
     <entry file="file://$PROJECT_DIR$/src/com/excell/SaveExclell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="method#driwing_report#0;class#SaveExclell#0" expanded="false" />
-            <element signature="method#create#0;class#SaveExclell#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ExcellLoader.java">
@@ -659,20 +633,13 @@
     <entry file="file://$PROJECT_DIR$/src/com/excell/SaveExclell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="method#driwing_report#0;class#SaveExclell#0" expanded="false" />
-            <element signature="method#create#0;class#SaveExclell#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ExcellLoader.java">
@@ -699,9 +666,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Info.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Report.java">
@@ -713,11 +678,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/excell/TransportExcell.java">
@@ -744,11 +705,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ExcellLoader.java">
@@ -767,9 +724,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Info.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/TransportAction.java">
@@ -797,10 +752,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/excell/SaveExclell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="method#driwing_report#0;class#SaveExclell#0" expanded="false" />
-            <element signature="method#create#0;class#SaveExclell#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -811,16 +763,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/config/XmlConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Info.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ClassLoader.java">
@@ -847,18 +795,12 @@
     </entry>
     <entry file="jar://C:/Program Files (x86)/jdk1.7.0_51/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="858" column="0" selection-start="31271" selection-end="31271" vertical-scroll-proportion="0.33333334" vertical-offset="13956" max-vertical-offset="19635">
-          <folding />
-        </state>
+        <state line="858" column="0" selection-start="31271" selection-end="31271" vertical-scroll-proportion="0.33333334" vertical-offset="13956" max-vertical-offset="19635" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="11" selection-start="916" selection-end="916" vertical-scroll-proportion="0.7364017" vertical-offset="135" max-vertical-offset="1020">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="39" column="11" selection-start="916" selection-end="916" vertical-scroll-proportion="0.7364017" vertical-offset="135" max-vertical-offset="1020" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ExcellLoader.java">
@@ -871,10 +813,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/excell/SaveExclell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="143" column="84" selection-start="6182" selection-end="6182" vertical-scroll-proportion="0.0" vertical-offset="1238" max-vertical-offset="1955">
-          <folding>
-            <element signature="method#driwing_report#0;class#SaveExclell#0" expanded="false" />
-            <element signature="method#create#0;class#SaveExclell#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -899,20 +838,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/config/Text.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/excell/TransportExcell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="171" column="9" selection-start="4868" selection-end="4868" vertical-scroll-proportion="0.40725243" vertical-offset="2139" max-vertical-offset="3859">
+        <state line="226" column="18" selection-start="7275" selection-end="7275" vertical-scroll-proportion="0.0" vertical-offset="2907" max-vertical-offset="3859">
           <folding>
             <element signature="e#7329#7330#0" expanded="true" />
             <element signature="e#7363#7364#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/config/Text.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="262" selection-end="262" vertical-scroll-proportion="0.2943723" vertical-offset="0" max-vertical-offset="924">
+          <folding />
         </state>
       </provider>
     </entry>
