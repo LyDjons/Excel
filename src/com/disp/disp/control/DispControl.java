@@ -1,10 +1,13 @@
 package com.disp.disp.control;
 
+import com.config.Config;
 import com.disp.disp.control.loadExcell.ExcellLoader;
 import com.disp.disp.control.loadExcell.Report;
 import com.disp.Disp;
 import com.disp.disp.control.saveExcell.SaveExclell;
 import com.disp.disp.control.saveExcell.TransportExcell;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -31,7 +34,7 @@ public class DispControl implements Disp {
 
     }
 
-    public void save_report(ArrayList<Report> reports,String path)  {
+    public void save_report(ArrayList<Report> reports,String path,ArrayList<Config>configs)  {
         //получаем имя листа(дата)
         Date d = (Date)reports.get(0).getTime_stop().clone();
         String list_name = ""+d.getDate()+"."+(d.getMonth()+1);
@@ -39,7 +42,8 @@ public class DispControl implements Disp {
         System.out.println(list_name);
         ArrayList<TransportExcell> transportExcell = new ArrayList<TransportExcell>();
         for(Report re: reports){
-            transportExcell.add(new TransportExcell(re));
+            transportExcell.add(new TransportExcell(re,configs));
+
 
         }
 
@@ -51,5 +55,37 @@ public class DispControl implements Disp {
         }catch(Exception e){
             System.out.println("Error! Can not write report to excell");
         }
+    }
+
+    @Override
+    public ArrayList<Config> load_config(String path) throws IOException {
+        ArrayList<Config> configList = new ArrayList<Config>();
+        FileInputStream inputStream = new FileInputStream(path);
+
+        XSSFWorkbook workbook  = new XSSFWorkbook(inputStream);
+        XSSFSheet sheet = workbook.getSheet("config");
+        int row_total = sheet.getLastRowNum();
+
+        for(int i = 1; i < row_total; i++){
+            String tracker = sheet.getRow(i).getCell(0).toString();
+
+            String num = sheet.getRow(i).getCell(7).toString();
+            try{
+                tracker=tracker.substring(0,tracker.indexOf("."));
+                 num =num.substring(0,num.indexOf("."));
+            }catch (Exception e){}
+            configList.add(new Config(
+                 tracker,
+                    sheet.getRow(i).getCell(1).toString(),
+                    sheet.getRow(i).getCell(2).toString(),
+                    sheet.getRow(i).getCell(3).toString(),
+                    sheet.getRow(i).getCell(4).toString(),
+                    sheet.getRow(i).getCell(5).toString(),
+                    sheet.getRow(i).getCell(6).toString(),
+                    num
+            ));
+        }
+
+        return configList;
     }
 }

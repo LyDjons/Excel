@@ -1,6 +1,7 @@
 package com;
 
 
+import com.config.Config;
 import com.disp.disp.control.loadExcell.Report;
 import com.disp.disp.control.saveExcell.SaveExclell;
 import com.disp.disp.control.saveExcell.TransportExcell;
@@ -19,8 +20,17 @@ public class MainClass {
         Disp disp = new DispControl();
 
              ArrayList<Report> report =disp.load_report("Document.xlsx");
+        ArrayList<Config> configs;
+        try {
+          configs = disp.load_config("config/config.xlsx");
 
-        disp.save_report(report,"sourse - копия.xlsx");
+        } catch (IOException e) {
+            configs = new ArrayList<Config>();
+        }
+        for(Config c: configs){
+            System.out.println(c.toString());
+        }
+       disp.save_report(report,"sourse - копия.xlsx",configs);
 
 
     }

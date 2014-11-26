@@ -1,11 +1,12 @@
 package com.disp.disp.control.saveExcell;
 
+import com.config.Config;
+import com.config.Transport;
 import com.disp.disp.control.loadExcell.Report;
 import com.disp.disp.control.loadExcell.TransportAction;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.Date;
+import java.util.*;
 
 /**
  * Created by disp.chimc on 31.10.14.
@@ -47,8 +48,16 @@ public class TransportExcell {
         return gos;
     }
 
-    public void setGos(String gos) {
-        this.gos = gos;
+    private String getGos(int tracker,ArrayList<Config>configs) {
+
+        String track = String.valueOf(tracker);
+        for(Config c: configs){
+            if(c.getTracker().contains(track)) {
+                return c.getGos();
+
+            }
+        }
+      return  "-";
     }
 
     public String getType_of_work() {
@@ -82,13 +91,19 @@ public class TransportExcell {
     public void setEnd(Date end) {
         this.end = (Date)end.clone();
     }
-
-    public TransportExcell(Report report) {
-        department= get_list_departments_of_work();
+    private String getDriver(Report report,ArrayList<Config> configs){
+        String tracker = String.valueOf(report.getTracker());
+        for(Config c: configs){
+            if(c.getTracker().contains(tracker)) return c.getName();
+        }
+        return "-";
+    }
+    public TransportExcell(Report report,ArrayList<Config>configs) {
+        department= get_list_departments_of_work(report,configs);
         transport_mark =report.getTransport();
-        gos = report.getInfo().getGos();
-        type_of_work = get_type_of_work();
-        fio  = report.getInfo().getDriver();
+        gos =getGos(report.getTracker(), configs);
+        type_of_work = get_type_of_work(report.getTracker(),configs);
+        fio  = getDriver(report, configs);
         if(getStartWork(report)==null){
 
             start=(Date)report.getTime_total().clone();
@@ -105,10 +120,8 @@ public class TransportExcell {
             end.setSeconds(59);
         }else {
             end = (Date)getEndWork(report).clone();}
-pintersList=getPainterListIntervalNumColumn(report.getTransportActions());
-
+        pintersList=getPainterListIntervalNumColumn(report.getTransportActions());
     }
-
           //получение начала движения
     private static Date getStartWork(Report report){
         for(TransportAction transportAction :report.getTransportActions()){
@@ -128,15 +141,50 @@ pintersList=getPainterListIntervalNumColumn(report.getTransportActions());
        return  null;
     }
 
-
-
         //получение типа культуры с поля
-    private static String get_type_of_work(){
-        return "Збирання кукурудзи_Тест";
+    private static String get_type_of_work(int tracker,ArrayList<Config> configs){
+        String track = String.valueOf(tracker);
+        for(Config c: configs){
+            if(c.getTracker().contains(track)) return c.getType_work();
+
+        }
+        return "-";
     }
     //получение Названия отделения, где находился транспорт
-    private static String get_list_departments_of_work(){
-        return "Хмільниця_Тест";
+
+    private static String get_list_departments_of_work(Report report,ArrayList<Config>configs){
+        String place ="";
+        for(Config c : configs){
+            if (Integer.parseInt(c.getTracker())==report.getTracker()){
+                if(c.getType_work().contains("збирання")) {
+                    place+="Комбайни ";
+                }else
+                if(c.getType_work().contains("бункер")) {
+                    place+="Бункера  ";
+                }
+
+
+            }
+
+        }
+
+        Set<String> places = new HashSet<String>();
+
+        for(TransportAction ta: report.getTransportActions()){
+            if(ta.getPlace().contains("Шб") ||ta.getPlace().contains("Пл") ) places.add("Шибиринівка,");
+            if(ta.getPlace().contains("Ру") ||ta.getPlace().contains("Нб") ) places.add("Рудка,");
+            if(ta.getPlace().contains("Ха") ||ta.getPlace().contains("Ря") ) places.add("Халявин,");
+            if(ta.getPlace().contains("Ро") ||ta.getPlace().contains("ВВ") ||ta.getPlace().contains("C")
+                    ||ta.getPlace().contains("Хм") ) places.add("Роїще,");
+            if(ta.getPlace().contains("ВЗ") ||ta.getPlace().contains("МО") ||
+                    ta.getPlace().contains("Пе")) places.add("Воробїв,");
+
+        }
+        for(String s : places){
+            place = place+" "+s;
+        }
+
+        return place.substring(0,place.length()-1);
     }
     public ArrayList<Pinter> getPainterListIntervalNumColumn(ArrayList<TransportAction> action){
         ArrayList<Pinter> painterarray = new ArrayList<Pinter>();

@@ -18,9 +18,10 @@ public class Report {
     private Date time_total;
     private Date time_stop;
 
-    private Info info;
-    private static ArrayList<Transport> mtsTransportXML;
+
+
     //статический блок загрузки конфигурационных файлов
+    private static ArrayList<Transport> mtsTransportXML;
     static {
         try {
            mtsTransportXML = XmlConverter.unmarshalling("config/config.xml");
@@ -37,17 +38,7 @@ public class Report {
         this.distance_total_km = distance;
         this.time_total =(Date)time_work.clone();
         this.time_stop = (Date)time_stop.clone();
-        try{
-for(Transport tr: mtsTransportXML){
-    if(tr.getTracker()==tracker){
-        this.info= new Info(tr.getLenght_harvasters(),tr.getDriver(),tr.getPhone(),tr.getGos());
-    }
-}
-if(this.info==null) this.info = new Info();
-        }catch(Exception e){
-            e.printStackTrace();
-            this.info = new Info();
-        }
+
 
 
     }
@@ -92,9 +83,6 @@ if(this.info==null) this.info = new Info();
         this.time_stop = (Date)time_stop.clone();
     }
 
-    public Info getInfo() {
-        return info;
-    }
     //Метод для получения полного отчета по комбайнам
     public ArrayList<TransportAction> getTransportActions() {
         return this.transportActions;
