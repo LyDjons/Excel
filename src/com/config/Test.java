@@ -3,9 +3,7 @@ package com.config;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -41,11 +39,20 @@ public class Test {
     }
 
     public static void main(String []s) throws IOException {
-       Test t = new Test();
-        ArrayList<Config> configs = t.get_config("config/config.xlsx");
-     for(Config c: configs){
-         System.out.println(c.toString());
-     }
+        try {
+            Process p = null;
+            String line = null;
+            p = Runtime.getRuntime().exec("D:/Новая папка (8)/gens_11a");
+            BufferedReader is = new BufferedReader(new InputStreamReader
+                    (p.getInputStream()));
+            while((line = is.readLine()) != null)
+            {
+                System.out.println(line);
+            }
+        }
+        catch(Exception e) {
+            System.out.println(e.getMessage());
+        }
 
 
     }
