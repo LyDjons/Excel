@@ -4,7 +4,7 @@ package com.swing;
  * Created by disp.chimc on 02.12.14.
  */
 
-import com.config.Config;
+
 import com.disp.Disp;
 import com.disp.disp.control.DispControl;
 
@@ -12,16 +12,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Time;
-import java.util.ArrayList;
+import java.io.FileNotFoundException;
+
 import java.util.Date;
 
-/* MenuDemo.java requires images/middle.gif. */
 
-/*
- * This class is just like MenuLookDemo, except the menu items
- * actually do something, thanks to event listeners.
- */
 public class MenuDemo {
     JTextArea output;
     JScrollPane scrollPane;
@@ -88,16 +83,22 @@ public class MenuDemo {
                 Thread thread = new Thread() {
                     public void run() {
                         output.append(new Date() + " :  Терпение, пытаюсь сохранить..." + newline);
-                        System.out.print(path_save);
-                        System.out.print(disp.getReport());
+                        try{
+                            disp.load_config("config/config.xlsx");
+                        }catch (FileNotFoundException e){
+
+                            output.append("Не удалось загрузить configs.xlsx");
+                        }catch (Exception e){
+
+                        }
                         try {
 
-                          disp.save_report(disp.getReport(),path_save,new ArrayList<Config>());
+                          disp.save_report(disp.getReport(),path_save,disp.getConfigs());
 
 
                         } catch (Exception e1) {
 
-                           output.append("Не удалось сохранить. Что то не так");
+                           output.append("Не удалось сохранить. Что то не так!");
                             return;
                         }
 

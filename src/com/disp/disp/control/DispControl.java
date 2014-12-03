@@ -20,6 +20,7 @@ import java.util.Date;
  */
 public class DispControl implements Disp {
     private ArrayList<Report> reports;
+    private ArrayList<Config> configs;
     @Override
     public ArrayList<Report> load_report(String path) {
         ExcellLoader excellLoader = new ExcellLoader();
@@ -101,12 +102,16 @@ public class DispControl implements Disp {
                     num
             ));
         }
-
+        configs =configList;
         return configList;
     }
 
     @Override
     public ArrayList<Report> getReport() {
         return reports;
+    }
+    @Override
+    public ArrayList<Config> getConfigs() {
+        return configs;
     }
 }

@@ -22,4 +22,6 @@ public interface Disp {
 
     public ArrayList<Report> getReport();
 
+    public ArrayList<Config> getConfigs();
+
 }
