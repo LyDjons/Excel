@@ -49,7 +49,7 @@ public class TransportExcell {
     }
 
     private String getGos(int tracker,ArrayList<Config>configs) {
-
+if(configs==null) return "нет в config";
         String track = String.valueOf(tracker);
         for(Config c: configs){
             if(c.getTracker().contains(track)) {
@@ -92,6 +92,7 @@ public class TransportExcell {
         this.end = (Date)end.clone();
     }
     private String getDriver(Report report,ArrayList<Config> configs){
+        if(configs==null) return "-";
         String tracker = String.valueOf(report.getTracker());
         for(Config c: configs){
             if(c.getTracker().contains(tracker)) return c.getName();
@@ -143,6 +144,7 @@ public class TransportExcell {
 
         //получение типа культуры с поля
     private static String get_type_of_work(int tracker,ArrayList<Config> configs){
+        if(configs==null) return "-";
         String track = String.valueOf(tracker);
         for(Config c: configs){
             if(c.getTracker().contains(track)) return c.getType_work();
@@ -154,6 +156,7 @@ public class TransportExcell {
 
     private static String get_list_departments_of_work(Report report,ArrayList<Config>configs){
         String place ="";
+        if(configs==null) return "-";
         for(Config c : configs){
             if (Integer.parseInt(c.getTracker())==report.getTracker()){
                 if(c.getType_work().contains("збирання")) {

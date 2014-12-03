@@ -24,12 +24,11 @@ public class MainClass {
         try {
           configs = disp.load_config("config/config.xlsx");
 
+
         } catch (IOException e) {
-            configs = new ArrayList<Config>();
+            configs = null;
         }
-        for(Config c: configs){
-            System.out.println(c.toString());
-        }
+
        disp.save_report(report,"sourse - копия.xlsx",configs);
 
 

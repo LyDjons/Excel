@@ -4,10 +4,16 @@ package com.swing;
  * Created by disp.chimc on 02.12.14.
  */
 
+import com.config.Config;
+import com.disp.Disp;
+import com.disp.disp.control.DispControl;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Time;
+import java.util.ArrayList;
 import java.util.Date;
 
 /* MenuDemo.java requires images/middle.gif. */
@@ -25,8 +31,10 @@ public class MenuDemo {
         final JMenuBar menuBar;
         JMenu menuFile;
         JMenuItem loadItem;
-        final JMenuItem menuSaveItem;
-
+        JMenu saveMenu;
+        JMenuItem saveItemPath;
+        JMenuItem saveItemNew;
+        final Disp disp = new DispControl();
 
         //Create the menuFile bar.
         menuBar = new JMenuBar();
@@ -35,41 +43,89 @@ public class MenuDemo {
 
         //a group of JMenuItems
         loadItem = new JMenuItem("Загрузить ДУТ");
-        menuSaveItem = new JMenuItem("Создать отчет");
-      //  ActionListener loadActionListener = new LoadActionListener();
+        saveMenu = new JMenu("Создать отчет");
+
+        saveItemPath = new JMenuItem("В существующий файл");
+        saveMenu.add(saveItemPath);
+
             loadItem.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                Thread thread = new Thread(){
+
+                   final String path_load=getPathToFile("Загрузить");
+                    if(path_load==null) return;
+
+                    Thread thread = new Thread(){
                   public void  run(){
                       output.append(new Date() + " :  Операция  Загрузки ДУТ..." + newline);
 
                       try {
 
-                          Thread.sleep(10000);    // здесь должна происходить загрузка дута
+
+                          disp.loadReport(path_load);
 
 
-                      } catch (InterruptedException e1) {
-                          e1.printStackTrace();
+                      } catch (Exception e) {
+                           output.append("Не удаллсь загрузить файл");
+                          return;
                       }
 
-                      output.append("Well done!");
+                      output.append("Файл успешно загружен!"+newline);
                   }
 
                 };
                     thread.start();
                 }
             });
+
+        saveItemPath.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                final String path_save = getPathToFile("Сохранить");
+                if (path_save == null) return;
+
+
+                Thread thread = new Thread() {
+                    public void run() {
+                        output.append(new Date() + " :  Терпение, пытаюсь сохранить..." + newline);
+                        System.out.print(path_save);
+                        System.out.print(disp.getReport());
+                        try {
+
+                          disp.save_report(disp.getReport(),path_save,new ArrayList<Config>());
+
+
+                        } catch (Exception e1) {
+
+                           output.append("Не удалось сохранить. Что то не так");
+                            return;
+                        }
+
+                        output.append("Файл сохранен! " + newline);
+                    }
+
+                };
+                thread.start();
+            }
+        });
+
         ActionListener saveActionListener = new SaveActionListener();
-            menuSaveItem.addActionListener(saveActionListener);
+            saveMenu.addActionListener(saveActionListener);
 
              menuFile.add(loadItem);
-             menuFile.add(menuSaveItem);
+             menuFile.add(saveMenu);
 
 
         return menuBar;
     }
+    public String getPathToFile(String name_dialog){
+        JFileChooser fileopen = new JFileChooser();
+        int ret = fileopen.showDialog(null, name_dialog);
+        if (ret == JFileChooser.APPROVE_OPTION) {
+            return fileopen.getSelectedFile().getPath();
 
+        } else return null;
+    }
     public Container createContentPane() {
         //Create the content-pane-to-be.
         JPanel contentPane = new JPanel(new BorderLayout());
@@ -86,21 +142,7 @@ public class MenuDemo {
         return contentPane;
     }
 
-   /* public class LoadActionListener implements ActionListener {
 
-       public void actionPerformed(ActionEvent e) {
-            output.append(new Date() + " :  Операция  Загрузки ДУТ..." + newline);
-            try {
-
-                Thread.sleep(10000);
-
-            } catch (InterruptedException e1) {
-                e1.printStackTrace();
-            }
-            output.append("Well done!");
-
-
-    }*/
     public class SaveActionListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             output.append(new Date() + " :  Операция  охранения..." + newline);
@@ -143,7 +185,9 @@ public class MenuDemo {
         //creating and showing this application's GUI.
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
+
                 createAndShowGUI();
+
             }
         });
     }

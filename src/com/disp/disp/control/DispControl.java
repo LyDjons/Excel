@@ -19,17 +19,33 @@ import java.util.Date;
  * Created by disp.chimc on 28.10.14.
  */
 public class DispControl implements Disp {
+    private ArrayList<Report> reports;
     @Override
     public ArrayList<Report> load_report(String path) {
         ExcellLoader excellLoader = new ExcellLoader();
         try {
             excellLoader.loadExcell(path);
-            ArrayList<Report> reports =excellLoader.getReports();
-            return reports;
+            ArrayList<Report> report =excellLoader.getReports();
+         reports=report;
+            return report;
         } catch (IOException e) {
             System.out.println("You have a problem with file: " + path);
             e.printStackTrace();
             return null;
+        }
+
+    }
+
+    public void loadReport(String path) {
+        ExcellLoader excellLoader = new ExcellLoader();
+        try {
+            excellLoader.loadExcell(path);
+            ArrayList<Report> report =excellLoader.getReports();
+
+            reports=report;
+        } catch (IOException e) {
+            System.out.println("You have a problem with file: " + path);
+            e.printStackTrace();
         }
 
     }
@@ -87,5 +103,10 @@ public class DispControl implements Disp {
         }
 
         return configList;
+    }
+
+    @Override
+    public ArrayList<Report> getReport() {
+        return reports;
     }
 }
