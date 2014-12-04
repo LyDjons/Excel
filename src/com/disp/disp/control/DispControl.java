@@ -71,6 +71,7 @@ public class DispControl implements Disp {
             saveExclell.update();
         }catch(Exception e){
             System.out.println("Error! Can not write report to excell");
+            throw new RuntimeException(e);
         }
     }
 
