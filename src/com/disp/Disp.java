@@ -18,7 +18,7 @@ public interface Disp {
     //сохраням в отчет
     public void save_report(ArrayList<Report> reports, String path,ArrayList<Config> configs);
 
-    public void loadReport(String path);
+    public void loadReport(String path) throws IOException;
 
     public ArrayList<Report> getReport();
 

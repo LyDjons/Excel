@@ -37,16 +37,16 @@ public class DispControl implements Disp {
 
     }
 
-    public void loadReport(String path) {
+    public void loadReport(String path) throws IOException {
         ExcellLoader excellLoader = new ExcellLoader();
         try {
             excellLoader.loadExcell(path);
             ArrayList<Report> report =excellLoader.getReports();
 
             reports=report;
-        } catch (IOException e) {
+        } catch (Exception e) {
             System.out.println("You have a problem with file: " + path);
-            e.printStackTrace();
+            throw new IOException("You have a problem with file: \n"+e.getMessage());
         }
 
     }

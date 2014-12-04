@@ -20,7 +20,7 @@ import java.util.Date;
 
 
 public class MenuDemo {
-    JTextArea output;
+   static JTextArea output;
     JScrollPane scrollPane;
     String newline = "\n";
 
@@ -57,16 +57,34 @@ public class MenuDemo {
             saveMenu.add(saveItemNew);
         show_config = new JMenuItem("Файл конфгурации");
         autor = new JMenuItem("Об авторе");
+
+
         autor.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                UIManager.put("OptionPane.cancelButtonText", "Annuler");
-                UIManager.put("OptionPane.noButtonText", "Non");
-                UIManager.put("OptionPane.okButtonText", "Спасибо, благодарности отправил");
-                UIManager.put("OptionPane.yesButtonText", "Oui");
                 JFrame parent = new JFrame();
-                String multiLineMsg[] = { "Hello,", "World"} ;
-                JOptionPane.showMessageDialog(parent, multiLineMsg);
+
+                String multiLineMsg[] = { "Разработчик: "
+                        , "   Диспетчер ЧИМК: "+newline
+                        ,"    Васюк Евгений Александрович",newline
+                        , "контакты:"
+                        , "   email: znahar917@gmail.com"
+                        , "   skype: znahar69"
+                        , "   phone: +380634873018",newline
+                        , "благодарить сюда:"
+                        , "   U424521704609 "
+                        , "   5168757200215517" } ;
+
+                Object[] options = {"Отблагодарил",
+                        "Я жмот"};
+                int n = JOptionPane.showOptionDialog(parent,
+                       multiLineMsg,
+                        "Info",
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.INFORMATION_MESSAGE,
+                        null,     //do not use a custom Icon
+                        options,  //the titles of buttons
+                        options[0]); //default button title
 
             }
         });
@@ -104,7 +122,7 @@ public class MenuDemo {
                           disp.loadReport(path_load);
 
                       } catch (Exception e) {
-                           output.append("Не удаллсь загрузить файл");
+                           output.append("Не удаллсь загрузить файл  "+path_load+newline);
                           return;
                       }
 
@@ -230,7 +248,7 @@ public class MenuDemo {
      */
     private static void createAndShowGUI() {
         //Create and set up the window.
-        JFrame frame = new JFrame("Super disp");
+        JFrame frame = new JFrame("Ленивый диспетчер   ");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //Create and set up the content pane.
@@ -243,6 +261,7 @@ public class MenuDemo {
         frame.setAlwaysOnTop(true);
 
         frame.setVisible(true);
+        output.append("Готов загрузить ДУТ"+"\n");
     }
 
     public static void main(String[] args) {

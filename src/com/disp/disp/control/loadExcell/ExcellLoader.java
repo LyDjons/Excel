@@ -105,7 +105,7 @@ public class ExcellLoader {
                 }
             }catch (Exception e){
                 System.out.println("Ошибка чтения с файла треккера, комбайна, и и конвертирования!");
-                e.printStackTrace();
+                throw new IOException("Ошибка чтения с файла треккера, комбайна, и и конвертирования!");
             }
 
         }
